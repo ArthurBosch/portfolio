@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply body;
+  filter: contrast(0.8);
+  width: 100vw;
+  height: 100vh;
+  animation-duration: 1.3s;
+  animation-name: fadein;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

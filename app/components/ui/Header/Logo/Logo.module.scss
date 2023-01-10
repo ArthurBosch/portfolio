@@ -1,0 +1,22 @@
+.logo {
+  @apply flex flex-row ml-12;
+
+  @media (max-width: 360px) {
+    @apply ml-4;
+  }
+
+  h3 {
+    @apply text-lightGray font-light text-xl;
+
+    @media (max-width: 300px) {
+      @apply text-sm;
+    }
+  }
+}
+
+.svgContainer {
+  @apply flex justify-center items-center;
+  svg {
+    @apply mr-4;
+  }
+}

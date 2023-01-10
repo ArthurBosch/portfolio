@@ -1,0 +1,64 @@
+.mockup {
+  @apply flex relative flex-col justify-center items-center w-1/2;
+
+  min-height: 550px;
+
+  @media (max-width: 900px) {
+    @apply w-full;
+    min-height: 400px;
+  }
+
+  @media (max-width: 419) {
+    @apply w-full;
+    min-height: 200px;
+  }
+}
+
+.imgContainer {
+  animation: mockup 5s infinite;
+  @apply shadow-bg shadow-xl;
+}
+
+.radioContainer {
+  @apply absolute bottom-10 flex flex-row mt-3;
+  @media (max-width: 861px) {
+    @apply -bottom-5;
+  }
+}
+
+.radio {
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  @apply bg-darkGray;
+
+  &:not(:first-of-type) {
+    @apply ml-4;
+  }
+}
+
+.radioWhite {
+  @apply bg-white transition-colors;
+}
+
+@keyframes mockup {
+  from {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

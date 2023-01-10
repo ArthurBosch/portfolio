@@ -1,0 +1,22 @@
+.links {
+  @apply flex flex-row mr-12 ml-8;
+
+  .link:not(:nth-child(1)) {
+    @apply ml-9;
+  }
+
+  @media (max-width: 479px) {
+    @apply ml-0;
+
+    .link:not(:nth-child(1)) {
+      @apply ml-5;
+    }
+  }
+
+  .link {
+    transition: 0.3s ease-in-out filter;
+    &:hover {
+      filter: brightness(150%);
+    }
+  }
+}

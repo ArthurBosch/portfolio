@@ -1,0 +1,132 @@
+.aboutContainer {
+  @apply relative mt-28 mb-28 overflow-x-hidden;
+}
+
+.titleContainer {
+  @apply mt-12 h-28;
+  h1 {
+    @apply text-8xl font-bold fill-none absolute right-10;
+    cursor: pointer;
+
+    -webkit-text-stroke: 1px #cdcdcd;
+
+    @media (max-width: 599px) {
+      @apply text-5xl ml-8;
+    }
+  }
+}
+.navigationContainer {
+  @apply w-full absolute top-1/2 z-10;
+
+  .arrowLeft {
+    @apply absolute left-4;
+
+    svg g path {
+      @apply fill-primary;
+    }
+
+    &:hover,
+    &:active {
+      svg {
+        g path {
+          @apply fill-accent;
+        }
+      }
+    }
+  }
+
+  .arrowRight {
+    @apply absolute right-12;
+
+    svg g path {
+      @apply fill-primary;
+    }
+
+    &:hover,
+    &:active {
+      svg {
+        g path {
+          @apply fill-accent;
+        }
+      }
+    }
+  }
+}
+
+.cardsContainer {
+  @apply flex flex-row justify-center;
+  width: 300vw;
+}
+
+@keyframes opacityKeyframes {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.active0 {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.active1 {
+  transform: translateX(-100vw);
+  transition: transform 0.5s ease-in-out;
+}
+
+.active2 {
+  transform: translateX(-200vw);
+  transition: transform 0.5s ease-in-out;
+}
+
+.animation {
+  animation: opacityKeyframes 1s ease-in-out;
+}
+
+.card {
+  @apply flex flex-col items-center;
+  width: 100vw;
+
+  h3 {
+    @apply text-3xl;
+
+    background: -webkit-linear-gradient(#cdcdcd, #868686);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: 1000px) {
+      @apply text-2xl;
+    }
+  }
+
+  .iconsContainer {
+    @apply flex flex-row justify-center mt-12;
+
+    @media (max-width: 1000px) {
+      @apply flex-col items-center justify-start mt-12;
+    }
+  }
+
+  .iconContainer {
+    @apply flex flex-col items-center;
+    &:not(:nth-of-type(1)) {
+      @apply ml-20;
+
+      @media (max-width: 1000px) {
+        @apply ml-0 mt-8;
+      }
+    }
+  }
+
+  h5 {
+    @apply text-white text-sm font-light mt-8;
+  }
+}

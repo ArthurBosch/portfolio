@@ -1,0 +1,48 @@
+.buttonsContainer {
+  @apply flex flex-row absolute bottom-8;
+
+  @media (max-width: 1000px) {
+    @apply -bottom-4;
+  }
+
+  @media (max-width: 419px) {
+    @apply flex-wrap;
+  }
+}
+
+.button {
+  @apply flex flex-row justify-between items-center text-xs text-lightGray border border-primary border-radius;
+  width: 200px;
+
+  &:hover {
+    @apply border-accent shadow-bg shadow-lg transition-all;
+  }
+
+  a {
+    @apply ml-8;
+  }
+
+  &:not(:nth-of-type(1)) {
+    @apply ml-8;
+  }
+
+  @media (max-width: 1100px) {
+    width: 150px;
+
+    a {
+      @apply ml-4;
+    }
+  }
+
+  @media (max-width: 419px) {
+    @apply w-full;
+
+    &:not(:nth-of-type(1)) {
+      @apply ml-0 mt-4;
+    }
+
+    a {
+      @apply ml-8;
+    }
+  }
+}

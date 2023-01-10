@@ -1,0 +1,52 @@
+.CVContainer {
+  @apply w-full h-48 bg-lightGray flex items-center justify-around flex-wrap;
+
+  background: radial-gradient(
+    98.26% 11347.74% at 0% 50%,
+    rgba(217, 217, 217, 0) 0%,
+    #d4d4d4 10.94%,
+    #cdcdcd 62.54%,
+    rgba(217, 217, 217, 0) 100%
+  );
+
+  h1 {
+    @apply text-9xl font-bold;
+    color: #1e1e1e;
+  }
+
+  @media (max-width: 900px) {
+    @apply h-72;
+  }
+}
+
+.buttonsContainer {
+  @apply flex flex-row;
+
+  @media (max-width: 900px) {
+    @apply flex flex-col;
+  }
+
+  button {
+    @apply border-2 border-darkGray border-solid border-radius pt-2 pb-2 pl-64 pr-64;
+
+    &:not(:nth-of-type(1)) {
+      @apply ml-10;
+
+      @media (max-width: 900px) {
+        @apply ml-0;
+      }
+    }
+    @media (max-width: 1300px) {
+      @apply ml-0 mt-5 pl-16 pr-16;
+    }
+
+    &:hover {
+      @apply shadow-lg border-white border-solid border-2;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .read {
+    @apply bg-bg text-white border-bg;
+  }
+}

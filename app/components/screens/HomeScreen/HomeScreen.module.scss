@@ -1,0 +1,27 @@
+.home {
+  @apply absolute font-light flex flex-col justify-center items-center pt-24;
+  @media (max-width: 320px) {
+    @apply pt-36;
+  }
+  text-underline-offset: 0.18rem;
+  width: 100vw;
+  height: 100vh;
+
+  .anchor {
+    @apply text-darkGray underline mt-24;
+  }
+
+  h1 {
+    @apply text-xl text-lightGray font-light mb-6;
+    @media (max-width: 479px) {
+      @apply text-base;
+    }
+    @media (max-width: 300px) {
+      @apply text-sm;
+    }
+  }
+
+  ul {
+    @apply mr-0;
+  }
+}

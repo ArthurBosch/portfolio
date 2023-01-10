@@ -1,0 +1,11 @@
+.titleContainer {
+  h1 {
+    @apply text-lightGray text-4xl font-light;
+  }
+}
+
+.paragraphContainer {
+  p {
+    @apply text-lightGray text-xl font-light mt-12;
+  }
+}

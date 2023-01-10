@@ -1,0 +1,25 @@
+.bgContainer {
+  @apply absolute bottom-72 -z-10;
+  svg {
+    g {
+      path {
+        fill: none;
+        @apply stroke-accent;
+        stroke-dashoffset: 10;
+        animation: dashOff 5s ease-in-out infinite alternate;
+      }
+    }
+  }
+
+  @keyframes dashOff {
+    from {
+      stroke-dasharray: 1;
+      opacity: 0;
+    }
+
+    to {
+      stroke-dasharray: 1000;
+      opacity: 1;
+    }
+  }
+}

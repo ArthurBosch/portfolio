@@ -1,0 +1,81 @@
+.bg {
+  @apply -z-10 absolute w-full h-full opacity-90;
+}
+
+.svg {
+  width: 100wv;
+  height: 100vh;
+}
+
+.svg rect:nth-child(1) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 5400ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+.svg rect:nth-child(2) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 5500ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+.svg rect:nth-child(3) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 5600ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+.svg rect:nth-child(4) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 5700ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+.svg rect:nth-child(5) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 5800ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+.svg rect:nth-child(6) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 5900ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+.svg rect:nth-child(7) {
+  stroke: #d038d3;
+  animation: animate-rect ease-in-out 6000ms infinite alternate,
+    animate-spin ease-in-out 10s infinite alternate 1s;
+  filter: blur(3px);
+  will-change: auto;
+}
+
+@keyframes animate-spin {
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes animate-rect {
+  to {
+    stroke: #458021;
+
+    x: 0.5;
+    y: -308.5;
+    width: 2199px;
+    height: 2199px;
+  }
+}

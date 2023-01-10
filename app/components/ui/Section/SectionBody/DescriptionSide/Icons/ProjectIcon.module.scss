@@ -1,0 +1,39 @@
+.iconsContainer {
+  @apply flex flex-row mt-12;
+
+  @media (max-width: 1260px) {
+    @apply flex-wrap;
+  }
+}
+
+.imgContainer {
+  @apply relative h-24 w-20 flex flex-col items-center justify-between;
+
+  h3 {
+    @apply text-darkGray hidden;
+    transition: display 0.5s ease-in-out;
+  }
+
+  &:hover {
+    h3 {
+      @apply block;
+    }
+  }
+
+  &:not(:nth-of-type(1)) {
+    @apply ml-8;
+  }
+  @media (max-width: 1260px) {
+    &:not(:nth-of-type(1)) {
+      @apply ml-2;
+    }
+    @apply mt-4;
+    img {
+      @apply h-10;
+    }
+  }
+
+  @media (max-width: 419px) {
+    @apply h-12 w-10;
+  }
+}

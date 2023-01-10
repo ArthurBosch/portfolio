@@ -1,0 +1,8 @@
+.desc {
+  @apply relative w-1/2;
+
+  @media (max-width: 900px) {
+    @apply w-full mt-10;
+    min-height: 400px;
+  }
+}
