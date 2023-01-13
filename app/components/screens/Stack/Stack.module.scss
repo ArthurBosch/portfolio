@@ -1,5 +1,5 @@
 .sliderContainer {
-  @apply flex flex-col justify-center items-center mt-20;
+  @apply flex flex-col justify-center items-center mt-20 overflow-x-hidden;
 }
 .active {
   transition: all 5s ease-in-out;

@@ -12,7 +12,7 @@
   animation: animate-rect ease-in-out 5400ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 .svg rect:nth-child(2) {
@@ -20,7 +20,7 @@
   animation: animate-rect ease-in-out 5500ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 .svg rect:nth-child(3) {
@@ -28,7 +28,7 @@
   animation: animate-rect ease-in-out 5600ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 .svg rect:nth-child(4) {
@@ -36,7 +36,7 @@
   animation: animate-rect ease-in-out 5700ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 .svg rect:nth-child(5) {
@@ -44,7 +44,7 @@
   animation: animate-rect ease-in-out 5800ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 .svg rect:nth-child(6) {
@@ -52,7 +52,7 @@
   animation: animate-rect ease-in-out 5900ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 .svg rect:nth-child(7) {
@@ -60,7 +60,7 @@
   animation: animate-rect ease-in-out 6000ms infinite alternate,
     animate-spin ease-in-out 10s infinite alternate 1s;
   filter: blur(3px);
-  will-change: auto;
+  will-change: x, y, width, height, transform;
 }
 
 @keyframes animate-spin {

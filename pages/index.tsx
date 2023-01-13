@@ -47,8 +47,8 @@ export default function Home() {
 
       <MenuContextProvider>
         <div className={styles.appContainer}>
-          <DynamicHeader />
           <MobileMenu />
+          <DynamicHeader />
           <DynamicBackground />
           <HomeScreen />
           <div className={styles.main}>

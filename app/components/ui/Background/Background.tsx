@@ -3,6 +3,7 @@ import styles from "./Background.module.scss";
 const Background: FC = () => {
   return (
     <div className={styles.bg}>
+      a
       <svg
         className={styles.svg}
         id="svg"

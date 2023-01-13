@@ -1,17 +1,16 @@
 .menu {
   @apply bg-opacity-0;
-  position: fixed;
-  z-index: 20;
-  left: -100%;
+  position: sticky;
+  top: 0;
+  height: 0;
   width: 100vw;
-  height: 100vh;
-  transition: left 0.5s ease-in-out;
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
 
   ul {
     @apply border-r-2 border-r-primary;
     background-color: #000000;
-    position: absolute;
-    top: 0;
     width: 70%;
     height: 100%;
 
@@ -28,9 +27,9 @@
 }
 
 .menuActive {
-  position: absolute;
-  left: 0;
-  transition: left 0.5s ease-in-out;
+  height: 100vh;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 }
 
 .menuButton {

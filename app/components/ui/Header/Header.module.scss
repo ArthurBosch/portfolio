@@ -5,6 +5,7 @@
 
 .header {
   @apply relative product-card border border-primary border-radius w-11/12 h-full flex items-center justify-between;
+  will-change: height, opacity;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
