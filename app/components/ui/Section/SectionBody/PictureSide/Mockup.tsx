@@ -20,7 +20,7 @@ const Mockup: FC<{ projectnumber: number }> = ({ projectnumber }) => {
       }
       setCount(count + 1);
       setSrc(mockups[projectnumber].imageSrcs[count]);
-    }, 5000);
+    }, 3000);
   }, [src]);
 
   return (

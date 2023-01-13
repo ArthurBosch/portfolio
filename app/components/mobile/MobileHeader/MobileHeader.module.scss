@@ -1,5 +1,6 @@
 .mobileHeader {
   @apply relative product-card border border-primary border-radius w-11/12 h-24;
+  overflow: hidden;
   transition: height 0.5s ease-in-out;
 
   .container {
@@ -7,7 +8,17 @@
   }
 
   ul {
-    animation: fadeOut 0.5s ease-in-out;
+    @apply text-lightGray w-full flex flex-col items-center;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+
+    li {
+      @apply h-16 flex items-center;
+
+      &:active {
+        @apply text-white;
+      }
+    }
   }
 }
 
@@ -15,15 +26,11 @@
   transition: height 0.5s ease-in-out;
   height: 400px;
   background-color: black;
+}
 
-  ul {
-    @apply text-lightGray w-full flex flex-col items-center;
-    animation: fadeIn 0.5s ease-in-out;
-
-    li {
-      @apply mt-10;
-    }
-  }
+.ulActive {
+  opacity: 1 !important;
+  transition: opacity 1s ease-in;
 }
 
 @keyframes fadeIn {
@@ -44,4 +51,12 @@
   100% {
     opacity: 0;
   }
+}
+
+.shown {
+  @apply h-24 opacity-100 transition-all duration-500;
+}
+
+.hidden {
+  @apply h-0 opacity-0 transition-all duration-500;
 }
