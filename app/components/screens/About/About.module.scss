@@ -1,5 +1,5 @@
 .aboutContainer {
-  @apply relative mt-28 mb-28 overflow-x-hidden;
+  @apply relative mt-28 mb-28 overflow-hidden;
 }
 
 .titleContainer {
@@ -16,7 +16,7 @@
   }
 }
 .navigationContainer {
-  @apply w-full absolute top-1/2 z-10;
+  @apply w-full h-9 absolute bottom-0 z-10;
 
   .arrowLeft {
     @apply absolute left-4;
@@ -117,6 +117,7 @@
 
   .iconContainer {
     @apply flex flex-col items-center;
+
     &:not(:nth-of-type(1)) {
       @apply ml-20;
 
@@ -124,9 +125,19 @@
         @apply ml-0 mt-8;
       }
     }
+
+    img {
+      @media (max-width: 519px) {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 
   h5 {
     @apply text-white text-sm font-light mt-8;
+    @media (max-width: 519px) {
+      @apply text-sm;
+    }
   }
 }
