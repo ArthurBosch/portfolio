@@ -1,11 +1,11 @@
 .home {
-  @apply absolute font-light flex flex-col justify-center items-center pt-24;
+  @apply font-light flex flex-col justify-center items-center;
+  margin-top: 30vh;
   @media (max-width: 320px) {
     @apply pt-36;
   }
   text-underline-offset: 0.18rem;
   width: 100vw;
-  height: 100vh;
 
   .anchor {
     @apply text-darkGray underline mt-24;

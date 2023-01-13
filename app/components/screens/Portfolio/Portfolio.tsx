@@ -10,7 +10,7 @@ import ClockBackground from "@/components/ui/Background/ClockBackground";
 const Portfolio: FC = () => {
   return (
     <>
-      <div id="portfolio" className={styles.main}>
+      <div id="portfolio" className={styles.portfolio}>
         <SectionTitle title="Portfolio" />
         <SectionSubTitle subtitle="Designed, developed and deployed" />
         <>

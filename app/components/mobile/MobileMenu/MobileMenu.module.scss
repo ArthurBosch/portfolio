@@ -1,21 +1,22 @@
 .menu {
   @apply bg-opacity-0;
-  position: sticky;
+  position: absolute;
   top: 0;
   height: 0;
   width: 100vw;
-  z-index: 50;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
+  z-index: 40;
 
   ul {
     @apply border-r-2 border-r-primary;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    position: none;
     background-color: #000000;
     width: 70%;
     height: 100%;
 
     li {
-      @apply mt-8 ml-8 p-5;
+      @apply mt-12 ml-8 p-5;
       width: 90%;
 
       a {
@@ -27,9 +28,13 @@
 }
 
 .menuActive {
-  height: 100vh;
-  transform: translateX(0);
+  height: 100%;
+}
+
+.menuUl {
+  transform: translateX(0) !important;
   transition: transform 0.5s ease-in-out;
+  position: fixed;
 }
 
 .menuButton {

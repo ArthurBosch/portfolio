@@ -18,7 +18,7 @@ const MobileMenu: FC<{}> = () => {
         handleClick(e);
       }}
     >
-      <ul>
+      <ul className={cn(menuIsOpened && styles.menuUl)}>
         <li>
           <a href="#portfolio">Back to top</a>
         </li>

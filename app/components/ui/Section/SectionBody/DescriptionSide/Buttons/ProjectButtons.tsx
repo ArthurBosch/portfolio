@@ -8,7 +8,7 @@ const ProjectButtons: FC<{ links: linksObj }> = ({ links }) => {
     <div className={styles.buttonsContainer}>
       <ProjectButton
         title={"See on Github"}
-        icon="Github"
+        icon="github"
         href={links.github}
       />
       <ProjectButton title={"See live"} icon="Arrow-right" href={links.live} />

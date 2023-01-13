@@ -1,23 +1,15 @@
 .appContainer {
-  animation: fadein 5s ease-in;
+  animation: fadein 1s ease-in;
+  position: relative;
+  z-index: 30;
 }
 
 @keyframes fadein {
-  from: {
+  from {
     filter: opacity(0);
   }
 
-  to: {
+  to {
     filter: opacity(1);
-  }
-}
-
-.main {
-  position: relative;
-  top: 90vh;
-  z-index: 30;
-
-  @media (max-width: 479px) {
-    top: 100vh;
   }
 }

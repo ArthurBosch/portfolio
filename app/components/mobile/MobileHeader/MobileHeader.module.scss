@@ -1,0 +1,47 @@
+.mobileHeader {
+  @apply relative product-card border border-primary border-radius w-11/12 h-24;
+  transition: height 0.5s ease-in-out;
+
+  .container {
+    @apply flex items-center h-24;
+  }
+
+  ul {
+    animation: fadeOut 0.5s ease-in-out;
+  }
+}
+
+.mobileHeaderActive {
+  transition: height 0.5s ease-in-out;
+  height: 400px;
+  background-color: black;
+
+  ul {
+    @apply text-lightGray w-full flex flex-col items-center;
+    animation: fadeIn 0.5s ease-in-out;
+
+    li {
+      @apply mt-10;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

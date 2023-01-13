@@ -47,17 +47,15 @@ export default function Home() {
 
       <MenuContextProvider>
         <div className={styles.appContainer}>
-          <MobileMenu />
+          {/* <MobileMenu /> */}
           <DynamicHeader />
-          <DynamicBackground />
+          {/* <DynamicBackground /> */}
           <HomeScreen />
-          <div className={styles.main}>
-            <Portfolio />
-            <Stack />
-            <SVSection />
-            <About />
-            <Links />
-          </div>
+          <Portfolio />
+          <Stack />
+          <SVSection />
+          <About />
+          <Links />
         </div>
       </MenuContextProvider>
 
