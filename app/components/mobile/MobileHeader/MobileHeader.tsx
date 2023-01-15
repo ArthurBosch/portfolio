@@ -1,6 +1,6 @@
 import Logo from "@/components/ui/Header/Logo/Logo";
 import { IContext, MenuContext } from "@/shared/MenuContextProvider";
-import { FC, useContext } from "react";
+import { FC, useContext, useEffect, useRef } from "react";
 import MobileMenuButton from "../MobileMenu/MobileMenuButton";
 import styles from "./MobileHeader.module.scss";
 import cn from "classnames";
@@ -10,9 +10,19 @@ import { useScrollDirection } from "@/hooks/useScrollDirection";
 const MobileHeader: FC = () => {
   const { menuIsOpened } = useContext(MenuContext) as IContext;
   const scrollDirection = useScrollDirection();
+  const header = useRef() as React.MutableRefObject<HTMLDivElement>;
+
+  useEffect(() => {
+    if (window.scrollY > 1000) {
+      setTimeout(() => {
+        header.current.className = cn(styles.mobileHeader, styles.hidden);
+      }, 5000);
+    }
+  }, [scrollDirection]);
 
   return (
     <div
+      ref={header}
       className={cn(
         styles.mobileHeader,
         menuIsOpened && styles.mobileHeaderActive,

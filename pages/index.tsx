@@ -10,10 +10,8 @@ import dynamic from "next/dynamic";
 import Stack from "@/components/screens/Stack/Stack";
 import About from "@/components/screens/About/About";
 import Links from "@/components/screens/Links/Links";
+import Header from "@/components/ui/Header/Header";
 
-const DynamicHeader = dynamic(() => import("@/components/ui/Header/Header"), {
-  ssr: false,
-});
 const DynamicBackground = dynamic(
   () => import("@/components/ui/Background/Background"),
   {
@@ -48,7 +46,7 @@ export default function Home() {
       <MenuContextProvider>
         <div className={styles.appContainer}>
           {/* <MobileMenu /> */}
-          <DynamicHeader />
+          <Header />
           {/* <DynamicBackground /> */}
           <HomeScreen />
           <Portfolio />
