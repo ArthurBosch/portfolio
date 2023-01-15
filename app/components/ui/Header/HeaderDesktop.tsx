@@ -12,7 +12,7 @@ const HeaderDesktop: FC = () => {
   const header = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
-    if (scrollY > 1500) {
+    if (scrollY > 1500 && scrollDirection !== "down") {
       setTimeout(() => {
         header.current.className = cn(styles.header, styles.hidden);
       }, 5000);

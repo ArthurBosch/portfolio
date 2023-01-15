@@ -1,21 +1,19 @@
 .mockup {
   @apply flex relative flex-col justify-around items-center w-1/2;
 
-  min-height: 550px;
+  height: 550px;
 
   @media (max-width: 900px) {
     @apply w-full;
-    min-height: 400px;
+    height: 400px;
   }
 
   @media (max-width: 419) {
     @apply w-full;
-    min-height: 200px;
+    height: 200px;
   }
 
   .imgContainer {
-    @apply shadow-bg shadow-xl;
-
     img .vertical {
       width: 173px;
       height: 383px;
@@ -27,13 +25,17 @@
     }
   }
 
+  .fadein {
+    animation: fadein 0.5s ease-in forwards;
+  }
+
   .navigationContainer {
     @apply w-full flex items-center flex-col relative;
 
     .arrowContainer {
       @apply absolute w-full;
       .arrowLeft {
-        @apply absolute left-10;
+        @apply absolute left-16;
 
         @media (max-width: 1019px) {
           @apply left-5;
@@ -53,7 +55,7 @@
       }
 
       .arrowRight {
-        @apply absolute right-10;
+        @apply absolute right-16;
         @media (max-width: 1019px) {
           @apply right-5;
         }
@@ -90,5 +92,15 @@
         @apply bg-white transition-colors;
       }
     }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
   }
 }

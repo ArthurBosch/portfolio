@@ -13,7 +13,7 @@ const MobileHeader: FC = () => {
   const header = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
-    if (window.scrollY > 1000) {
+    if (window.scrollY > 1000 && scrollDirection !== "down") {
       setTimeout(() => {
         header.current.className = cn(styles.mobileHeader, styles.hidden);
       }, 5000);
