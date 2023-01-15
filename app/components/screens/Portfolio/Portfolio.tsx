@@ -27,8 +27,8 @@ const Portfolio: FC = () => {
             );
           })}
         </>
-        <ClockBackground />
-        <FilmBackground />
+        {/* <ClockBackground />
+        <FilmBackground /> */}
       </div>
     </>
   );

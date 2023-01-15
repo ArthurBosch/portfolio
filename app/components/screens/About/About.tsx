@@ -8,21 +8,10 @@ import AboutCard2 from "./cards/AboutCard2";
 import AboutCard3 from "./cards/AboutCard3";
 import cn from "classnames";
 import AboutProgressSlider from "./ProgressSlider/AboutProgressSlider";
-import { useSwipe } from "use-swipe-hook";
 import { useSwipeable } from "react-swipeable";
 
 const About: FC = () => {
   const [card, setCard] = useState(0);
-
-  const config = {
-    delta: 10, // min distance(px) before a swipe starts. *See Notes*
-    preventScrollOnSwipe: false, // prevents scroll during swipe (*See Details*)
-    trackTouch: true, // track touch input
-    trackMouse: false, // track mouse input
-    rotationAngle: 0, // set a rotation angle
-    swipeDuration: Infinity, // allowable duration of a swipe (ms). *See Notes*
-    touchEventOptions: { passive: true }, // options for touch listeners (*See Details*)
-  };
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, FC, SetStateAction, useEffect } from "react";
 import styles from "./About.module.scss";
 
 const AboutNavigation: FC<{
@@ -28,7 +27,6 @@ const AboutNavigation: FC<{
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
-    // window.addEventListener("touch", handleTouch)
 
     return () => {
       window.removeEventListener("keydown", handleKeydown);

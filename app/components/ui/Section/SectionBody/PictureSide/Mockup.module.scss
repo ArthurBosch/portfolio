@@ -1,5 +1,5 @@
 .mockup {
-  @apply flex relative flex-col justify-center items-center w-1/2;
+  @apply flex relative flex-col justify-around items-center w-1/2;
 
   min-height: 550px;
 
@@ -12,53 +12,83 @@
     @apply w-full;
     min-height: 200px;
   }
-}
 
-.imgContainer {
-  animation: mockup 3s infinite;
-  @apply shadow-bg shadow-xl;
-}
+  .imgContainer {
+    @apply shadow-bg shadow-xl;
 
-.radioContainer {
-  @apply absolute bottom-10 flex flex-row mt-3;
-  @media (max-width: 861px) {
-    @apply -bottom-5;
-  }
-}
+    img .vertical {
+      width: 173px;
+      height: 383px;
+    }
 
-.radio {
-  width: 10px;
-  height: 10px;
-  border-radius: 25px;
-  @apply bg-darkGray;
-
-  &:not(:first-of-type) {
-    @apply ml-4;
-  }
-}
-
-.radioWhite {
-  @apply bg-white transition-colors;
-}
-
-@keyframes mockup {
-  from {
-    opacity: 0;
+    img .horizontal {
+      width: 432px;
+      height: 259px;
+    }
   }
 
-  20% {
-    opacity: 1;
-  }
+  .navigationContainer {
+    @apply w-full flex items-center flex-col relative;
 
-  75% {
-    opacity: 1;
-  }
+    .arrowContainer {
+      @apply absolute w-full;
+      .arrowLeft {
+        @apply absolute left-10;
 
-  85% {
-    opacity: 0;
-  }
+        @media (max-width: 1019px) {
+          @apply left-5;
+        }
+        svg g path {
+          @apply fill-primary;
+        }
 
-  to {
-    opacity: 0;
+        &:hover,
+        &:active {
+          svg {
+            g path {
+              @apply fill-accent;
+            }
+          }
+        }
+      }
+
+      .arrowRight {
+        @apply absolute right-10;
+        @media (max-width: 1019px) {
+          @apply right-5;
+        }
+        svg g path {
+          @apply fill-primary;
+        }
+
+        &:hover,
+        &:active {
+          svg {
+            g path {
+              @apply fill-accent;
+            }
+          }
+        }
+      }
+    }
+
+    .radioContainer {
+      @apply flex flex-row mt-3;
+
+      .radio {
+        width: 10px;
+        height: 10px;
+        border-radius: 25px;
+        @apply bg-darkGray;
+
+        &:not(:first-of-type) {
+          @apply ml-4;
+        }
+      }
+
+      .radioWhite {
+        @apply bg-white transition-colors;
+      }
+    }
   }
 }
