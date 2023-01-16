@@ -30,7 +30,7 @@
   }
 
   .navigationContainer {
-    @apply w-full flex items-center flex-col relative;
+    @apply w-full flex items-center flex-col relative mt-6;
 
     .arrowContainer {
       @apply absolute w-full;

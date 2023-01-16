@@ -69,7 +69,7 @@ const StackSlider: FC = () => {
 
   return (
     <div className={styles.sliderContainer}>
-      <div className={styles.slider}>
+      {/* <div className={styles.slider}>
         {icons.map((i) => {
           return (
             <Image
@@ -86,7 +86,99 @@ const StackSlider: FC = () => {
       <div className={styles.stackText}>
         <h1>{icons[active].icon}</h1>
         <p>{icons[active].desc}</p>
+      </div> */}
+      <div className={styles.sliderItem}>
+        <div className={styles.card}>
+          <h3>Front-end technologies</h3>
+          <div className={styles.cardItem}>
+            <Image
+              src={"/icons/React-light.svg"}
+              alt="tech icon - React"
+              width={100}
+              height={100}
+            />
+            <h5>React</h5>
+          </div>
+          <div className={styles.cardItem}>
+            <Image
+              src={"/icons/NextJS-light.svg"}
+              alt="tech icon - React"
+              width={100}
+              height={100}
+            />
+            <h5>NextJS</h5>
+          </div>
+        </div>
       </div>
+      {/* <div className={styles.card}>
+        <h3>Back-end technologies</h3>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/NestJS-light.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>NestJS</h5>
+        </div>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/NodeJS-light.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>NodeJS</h5>
+        </div>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/Postgres-light.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>Postgres</h5>
+        </div>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/Mongo-light.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>Mongo</h5>
+        </div>
+      </div> */}
+      {/* <div className={styles.card}>
+        <h3>Front-end technologies</h3>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/Typescript.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>Typescript</h5>
+        </div>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/NextJS.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>React</h5>
+        </div>
+        <div className={styles.cardItem}>
+          <Image
+            src={"/icons/React.svg"}
+            alt="tech icon - React"
+            width={100}
+            height={100}
+          />
+          <h5>React</h5>
+        </div>
+      </div> */}
     </div>
   );
 };
