@@ -2,30 +2,82 @@
   @apply overflow-hidden;
 
   .sliderContainer {
-    @apply flex flex-row mt-16 mb-16;
-    width: 200vw;
+    width: 100vw;
+    .sliderSwitch {
+      @apply flex flex-row justify-center mt-12;
+      .sliderSwitchButton {
+        @apply text-darkGray border-darkGray pl-8 pr-8 pt-4 pb-4;
+        border-width: 1px;
+        border-radius: 10px;
 
-    .sliderItem {
-      @apply flex justify-center;
-      width: 100vw;
+        &:not(:nth-of-type(0)) {
+          @apply ml-8;
 
-      .card {
-        @apply flex flex-wrap relative border-2 border-darkGray border-radius;
-
-        &:not(:nth-of-type(1)) {
-          @apply ml-12;
+          @media (max-width: 479px) {
+            @apply ml-4;
+          }
         }
 
-        h3 {
-          @apply text-lightGray absolute -top-3 left-2 pl-2 pr-2;
-          background-color: #000000;
+        @media (max-width: 479px) {
+          @apply pl-3 pr-3 pt-1.5 pb-1.5 text-sm;
         }
+      }
 
-        .cardItem {
-          @apply flex flex-col p-8 items-center;
+      .sliderSwitchButton_active {
+        @apply border-lightGray text-white;
+      }
+    }
 
-          h5 {
-            @apply text-lightGray mt-5;
+    .itemsContainer {
+      @apply flex flex-row mt-16 mb-16;
+      width: 300vw;
+
+      .sliderItem {
+        @apply flex justify-center;
+        width: 100vw;
+
+        .card {
+          @apply flex flex-wrap relative border-2 border-darkGray border-radius;
+
+          @media (max-width: 479px) {
+            @apply justify-center pt-3;
+            width: 90%;
+          }
+
+          &:not(:nth-of-type(1)) {
+            @apply ml-12;
+          }
+
+          h3 {
+            @apply text-lightGray absolute -top-3 left-2 pl-2 pr-2;
+            background-color: #000000;
+          }
+
+          .cardItem {
+            @apply flex flex-col p-8 items-center;
+
+            @media (max-width: 479px) {
+              @apply p-4;
+            }
+
+            img {
+              width: 100px;
+              height: 100px;
+
+              @media (max-width: 479px) {
+                width: 80px;
+                height: 80px;
+              }
+
+              @media (max-width: 879px) {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            h5 {
+              @apply text-lightGray mt-5;
+            }
           }
         }
       }
