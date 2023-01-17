@@ -1,7 +1,8 @@
 import { linksObj } from "data/mockups";
+import dynamic from "next/dynamic";
 import { FC } from "react";
 import ProjectDescription from "./DescriptionSide/ProjectDescription";
-import Mockup from "./PictureSide/Mockup";
+
 import styles from "./SectionBody.module.scss";
 
 interface ISectionBody {
@@ -12,6 +13,10 @@ interface ISectionBody {
   links: linksObj;
 }
 
+const DynamicMockup = dynamic(() => import("./PictureSide/Mockup"), {
+  ssr: false,
+});
+
 const SectionBody: FC<ISectionBody> = ({
   title,
   projectnumber,
@@ -21,7 +26,7 @@ const SectionBody: FC<ISectionBody> = ({
 }) => {
   return (
     <div className={styles.body}>
-      <Mockup projectnumber={projectnumber} />
+      <DynamicMockup projectnumber={projectnumber} />
       <ProjectDescription
         title={title}
         paragraph={paragraph}

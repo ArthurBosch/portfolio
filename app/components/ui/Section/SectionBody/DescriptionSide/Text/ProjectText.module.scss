@@ -9,8 +9,7 @@
     @apply text-lightGray text-xl font-light mt-12;
 
     @media (max-width: 519px) {
-      @apply text-lightGray;
-      line-height: 2rem;
+      @apply text-lightGray text-sm;
     }
   }
 }

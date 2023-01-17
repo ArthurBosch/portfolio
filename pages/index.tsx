@@ -8,14 +8,11 @@ import Portfolio from "@/components/screens/Portfolio/Portfolio";
 import Stack from "@/components/screens/Stack/Stack";
 import About from "@/components/screens/About/About";
 import Links from "@/components/screens/Links/Links";
-import Header from "@/components/ui/Header/Header";
+import dynamic from "next/dynamic";
 
-// const DynamicBackground = dynamic(
-//   () => import("@/components/ui/Background/Background"),
-//   {
-//     ssr: false,
-//   }
-// );
+const DynamicHeader = dynamic(() => import("@/components/ui/Header/Header"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,9 +40,7 @@ export default function Home() {
 
       <MenuContextProvider>
         <div className={styles.appContainer}>
-          {/* <MobileMenu /> */}
-          <Header />
-          {/* <DynamicBackground /> */}
+          <DynamicHeader />
           <HomeScreen />
           <Portfolio />
           <Stack />

@@ -10,8 +10,8 @@
 
     -webkit-text-stroke: 1px #cdcdcd;
 
-    @media (max-width: 599px) {
-      @apply text-5xl ml-8;
+    @media (max-width: 479px) {
+      @apply text-6xl ml-8;
     }
   }
 }
@@ -136,8 +136,8 @@
 
   h5 {
     @apply text-white text-sm font-light mt-8;
-    @media (max-width: 519px) {
-      @apply text-sm;
+    @media (max-width: 479px) {
+      @apply text-sm mt-2;
     }
   }
 }

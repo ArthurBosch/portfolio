@@ -15,17 +15,6 @@ const Mockup: FC<{ projectnumber: number }> = ({ projectnumber }) => {
     setSrc(mockups[projectnumber].imageSrcs[count]);
   }, [count]);
 
-  useEffect(() => {
-    if (imageContainer.current !== null) {
-      imageContainer.current.className = cn(styles.fadein, styles.imgContainer);
-    }
-    setTimeout(() => {
-      if (imageContainer.current !== null) {
-        imageContainer.current.className = styles.imgContainer;
-      }
-    }, 500);
-  }, [count]);
-
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       if (count !== 2) {
@@ -48,23 +37,57 @@ const Mockup: FC<{ projectnumber: number }> = ({ projectnumber }) => {
   };
 
   return (
-    <div className={styles.mockup}>
-      <div className={styles.imgContainer} ref={imageContainer}>
-        {src && (
-          <Image
-            {...handlers}
-            className={cn(
-              mockups[projectnumber].isHorizontal
-                ? styles.horizontal
-                : styles.vertical
-            )}
-            src={src}
-            height={mockups[projectnumber].isHorizontal ? 259 : 383}
-            width={mockups[projectnumber].isHorizontal ? 432 : 173}
-            alt="mockup"
-          />
-        )}
+    <div className={styles.mockup} {...handlers}>
+      <div className={styles.sliderWrapper}>
+        <div
+          className={styles.sliderContainer}
+          style={{
+            transform: `translateX(-${count}00vw)`,
+            transition: "transform 0.5s ease-in-out",
+          }}
+        >
+          <div className={styles.imgContainer} ref={imageContainer}>
+            <Image
+              className={cn(
+                mockups[projectnumber].isHorizontal
+                  ? styles.horizontal
+                  : styles.vertical
+              )}
+              src={mockups[projectnumber].imageSrcs[0]}
+              height={mockups[projectnumber].isHorizontal ? 259 : 383}
+              width={mockups[projectnumber].isHorizontal ? 432 : 173}
+              alt="mockup"
+            />
+          </div>
+          <div className={styles.imgContainer} ref={imageContainer}>
+            <Image
+              className={cn(
+                mockups[projectnumber].isHorizontal
+                  ? styles.horizontal
+                  : styles.vertical
+              )}
+              src={mockups[projectnumber].imageSrcs[1]}
+              height={mockups[projectnumber].isHorizontal ? 259 : 383}
+              width={mockups[projectnumber].isHorizontal ? 432 : 173}
+              alt="mockup"
+            />
+          </div>
+          <div className={styles.imgContainer} ref={imageContainer}>
+            <Image
+              className={cn(
+                mockups[projectnumber].isHorizontal
+                  ? styles.horizontal
+                  : styles.vertical
+              )}
+              src={mockups[projectnumber].imageSrcs[2]}
+              height={mockups[projectnumber].isHorizontal ? 259 : 383}
+              width={mockups[projectnumber].isHorizontal ? 432 : 173}
+              alt="mockup"
+            />
+          </div>
+        </div>
       </div>
+
       <div className={styles.navigationContainer}>
         <div className={styles.radioContainer}>
           {mockups[projectnumber].imageSrcs.map((src) => {

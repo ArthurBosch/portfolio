@@ -1,12 +1,8 @@
 .buttonsContainer {
-  @apply flex flex-row absolute bottom-8;
+  @apply flex flex-row mt-12;
 
-  @media (max-width: 1000px) {
-    @apply -bottom-4;
-  }
-
-  @media (max-width: 419px) {
-    @apply flex-wrap;
+  @media (max-width: 479px) {
+    @apply block;
   }
 }
 
@@ -34,7 +30,7 @@
     }
   }
 
-  @media (max-width: 419px) {
+  @media (max-width: 479px) {
     @apply w-full;
 
     &:not(:nth-of-type(1)) {

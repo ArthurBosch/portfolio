@@ -1,19 +1,18 @@
 .body {
   margin: 7rem 4.5rem;
   padding: 5rem 2.5rem;
-  min-height: 550px;
-  // backdrop-filter: blur(10px);
-  // -webkit-backdrop-filter: blur(10px);
 
+  @apply flex flex-row flex-wrap product-card border-radius;
   @media (max-width: 861px) {
+    @apply flex-col;
     margin: 4.5rem 2rem;
     padding: 2.5rem 1rem;
-    min-height: 1100px;
+    // min-height: 1100px;
   }
 
   @media (max-width: 419px) {
-    min-height: 1300px;
-  }
+    @apply flex-col;
 
-  @apply flex flex-row flex-wrap product-card border-radius;
+    // min-height: 1300px;;
+  }
 }

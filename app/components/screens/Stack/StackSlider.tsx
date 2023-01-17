@@ -86,7 +86,7 @@ const StackSlider: FC = () => {
             </div>
             <div className={styles.cardItem}>
               <Image
-                src={"/icons/tailwind-light.svg"}
+                src={"/icons/Tailwind-light.svg"}
                 alt="tech icon - React"
                 width={100}
                 height={100}
@@ -127,7 +127,7 @@ const StackSlider: FC = () => {
             </div>
             <div className={styles.cardItem}>
               <Image
-                src={"/icons/mongo-light.svg"}
+                src={"/icons/Mongo-light.svg"}
                 alt="tech icon - React"
                 width={100}
                 height={100}
@@ -154,7 +154,6 @@ const StackSlider: FC = () => {
             </div>
           </div>
         </div>
-
         <div className={styles.sliderItem}>
           <div className={styles.card}>
             <h3>Tools</h3>

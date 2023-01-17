@@ -1,27 +1,33 @@
 .mockup {
-  @apply flex relative flex-col justify-around items-center w-1/2;
-
-  height: 550px;
+  @apply flex relative flex-col justify-around items-center w-1/2 overflow-hidden;
 
   @media (max-width: 900px) {
     @apply w-full;
-    height: 400px;
   }
 
-  @media (max-width: 419) {
-    @apply w-full;
-    height: 200px;
-  }
+  .sliderWrapper {
+    width: 100vw;
 
-  .imgContainer {
-    img .vertical {
-      width: 173px;
-      height: 383px;
-    }
+    .sliderContainer {
+      @apply flex flex-row;
+      width: 300vw;
 
-    img .horizontal {
-      width: 432px;
-      height: 259px;
+      .imgContainer {
+        @apply flex justify-center;
+        width: 100vw;
+
+        .vertical {
+          height: 383px;
+        }
+
+        .horizontal {
+          height: 210px;
+
+          @media (max-width: 529px) {
+            height: auto;
+          }
+        }
+      }
     }
   }
 
@@ -35,7 +41,11 @@
     .arrowContainer {
       @apply absolute w-full;
       .arrowLeft {
-        @apply absolute left-16;
+        @apply absolute left-48;
+
+        @media (max-width: 1279px) {
+          @apply left-32;
+        }
 
         @media (max-width: 1019px) {
           @apply left-5;
@@ -55,7 +65,10 @@
       }
 
       .arrowRight {
-        @apply absolute right-16;
+        @apply absolute right-48;
+        @media (max-width: 1279px) {
+          @apply right-32;
+        }
         @media (max-width: 1019px) {
           @apply right-5;
         }
@@ -75,7 +88,7 @@
     }
 
     .radioContainer {
-      @apply flex flex-row mt-3;
+      @apply flex flex-row mt-3 mb-3;
 
       .radio {
         width: 10px;
