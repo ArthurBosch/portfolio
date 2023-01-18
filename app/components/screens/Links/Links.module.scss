@@ -1,3 +1,21 @@
-.linksContainer {
-  @apply h-28;
+.linksSection {
+  @apply mt-64;
+
+  .linksContainer {
+    @apply flex flex-row justify-center pt-12 pb-12 pl-12 pr-12;
+
+    @media (max-width: 879px) {
+      @apply pt-24 pb-24 pl-12 pr-12;
+    }
+
+    .linkContainer {
+      &:not(:nth-of-type(1)) {
+        @apply ml-16;
+
+        @media (max-width: 879px) {
+          @apply ml-4;
+        }
+      }
+    }
+  }
 }

@@ -9,6 +9,7 @@ import Stack from "@/components/screens/Stack/Stack";
 import About from "@/components/screens/About/About";
 import Links from "@/components/screens/Links/Links";
 import dynamic from "next/dynamic";
+import Footer from "@/components/screens/Footer/Footer";
 
 const DynamicHeader = dynamic(() => import("@/components/ui/Header/Header"), {
   ssr: false,
@@ -47,10 +48,9 @@ export default function Home() {
           <SVSection />
           <About />
           <Links />
+          <Footer />
         </div>
       </MenuContextProvider>
-
-      {/* <Footer/> */}
     </>
   );
 }

@@ -1,0 +1,8 @@
+.footerSection {
+  @apply flex justify-center w-full;
+
+  p {
+    @apply text-white;
+    max-width: 90%;
+  }
+}
