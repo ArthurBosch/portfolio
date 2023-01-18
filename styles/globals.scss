@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "ResistMono";
+  src: url("/font/ResistMono-Rg.otf");
+  src: url("/font/ResistMono-Bg.otf");
+  src: url("/font/ResistMono-Lt.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
 body {
   @apply body;
   filter: contrast(0.8);
