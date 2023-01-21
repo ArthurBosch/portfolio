@@ -9,7 +9,9 @@ const ProjectButton: FC<{ title: string; icon: string; href: string }> = ({
 }) => {
   return (
     <button className={styles.button}>
-      <Link href={href}>{title}</Link>
+      <Link href={href} target="_blank">
+        {title}
+      </Link>
       <Image src={`/icons/${icon}.svg`} alt="icon" width={34} height={34} />
     </button>
   );

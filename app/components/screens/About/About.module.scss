@@ -16,37 +16,53 @@
   }
 }
 .navigationContainer {
-  @apply w-full h-9 absolute bottom-0 z-10;
+  @apply w-full h-9 absolute bottom-8 z-10;
 
   .arrowLeft {
-    @apply absolute left-4;
+    @apply absolute left-4 p-4;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      45deg,
+      rgb(66, 66, 66) 0%,
+      rgb(170, 170, 170) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    border-radius: 50%;
 
     svg g path {
-      @apply fill-primary;
+      @apply fill-bg;
     }
 
     &:hover,
     &:active {
       svg {
         g path {
-          @apply fill-accent;
+          @apply fill-white;
         }
       }
     }
   }
 
   .arrowRight {
-    @apply absolute right-12;
+    @apply absolute right-12 p-4;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      135deg,
+      rgb(66, 66, 66) 0%,
+      rgb(170, 170, 170) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    border-radius: 50%;
 
     svg g path {
-      @apply fill-primary;
+      @apply fill-bg;
     }
 
     &:hover,
     &:active {
       svg {
         g path {
-          @apply fill-accent;
+          @apply fill-white;
         }
       }
     }
@@ -117,6 +133,7 @@
 
   .iconContainer {
     @apply flex flex-col items-center;
+    max-width: 25%;
 
     &:not(:nth-of-type(1)) {
       @apply ml-20;
@@ -135,7 +152,7 @@
   }
 
   h5 {
-    @apply text-white text-sm font-light mt-8;
+    @apply text-white text-sm font-light mt-8 text-center;
     @media (max-width: 479px) {
       @apply text-sm mt-2;
     }

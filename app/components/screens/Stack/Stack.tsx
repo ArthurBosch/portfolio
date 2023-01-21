@@ -6,7 +6,7 @@ import StackSlider from "./StackSlider";
 
 const Stack: FC = () => {
   return (
-    <div className={styles.stackContainer}>
+    <div className={styles.stackContainer} id="stack">
       <SectionTitle title="Stack" />
       <SectionSubTitle subtitle="Experienced with both front-end and back-end technologies" />
       <StackSlider />

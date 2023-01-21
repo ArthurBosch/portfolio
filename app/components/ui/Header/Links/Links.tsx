@@ -15,7 +15,10 @@ const Links: FC = () => {
       />
       <LinksItem image={github} link="https://github.com/ArthurBosch" />
       <LinksItem image={telegram} link="https://t.me/champagneboi" />
-      <LinksItem image={linkedin} link="" />
+      <LinksItem
+        image={linkedin}
+        link="https://www.linkedin.com/in/arthur-bosch-dev/"
+      />
     </ul>
   );
 };

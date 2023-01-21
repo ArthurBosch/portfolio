@@ -36,12 +36,14 @@
   }
 
   .navigationContainer {
-    @apply w-full flex items-center flex-col relative mt-6;
+    @apply w-full flex items-center flex-col relative mt-6 h-14;
 
     .arrowContainer {
-      @apply absolute w-full;
+      @apply absolute w-full h-full bottom-2;
       .arrowLeft {
-        @apply absolute left-48;
+        @apply absolute left-48 p-2;
+        background-color: #000;
+        border-radius: 50%;
 
         @media (max-width: 1279px) {
           @apply left-32;
@@ -65,7 +67,9 @@
       }
 
       .arrowRight {
-        @apply absolute right-48;
+        @apply absolute right-48 p-2;
+        background-color: #000;
+        border-radius: 50%;
         @media (max-width: 1279px) {
           @apply right-32;
         }

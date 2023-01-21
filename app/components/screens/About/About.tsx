@@ -27,7 +27,7 @@ const About: FC = () => {
   });
 
   return (
-    <div {...handlers} className={styles.aboutContainer}>
+    <div {...handlers} className={styles.aboutContainer} id="about">
       <AboutTitle />
       <AboutNavigation setCard={setCard} card={card} />
       <AboutProgressSlider cardsNum={3} active={card} />

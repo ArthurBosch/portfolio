@@ -6,17 +6,20 @@ import styles from "./MobileHeader.module.scss";
 import cn from "classnames";
 import { useMobile } from "@/hooks/useMobile";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
+import { useTimeout } from "@/hooks/useTimeout";
 
 const MobileHeader: FC = () => {
   const { menuIsOpened } = useContext(MenuContext) as IContext;
   const scrollDirection = useScrollDirection();
   const header = useRef() as React.MutableRefObject<HTMLDivElement>;
 
+  const cancel = useTimeout(() => {
+    header.current.className = cn(styles.header, styles.hidden);
+  }, 5000);
+
   useEffect(() => {
-    if (window.scrollY > 1000 && scrollDirection !== "down") {
-      setTimeout(() => {
-        header.current.className = cn(styles.mobileHeader, styles.hidden);
-      }, 5000);
+    if (scrollY > 1500 && scrollDirection !== "down") {
+      cancel();
     }
   }, [scrollDirection]);
 

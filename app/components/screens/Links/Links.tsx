@@ -6,10 +6,10 @@ import styles from "./Links.module.scss";
 const Links: FC = () => {
   return (
     <section className={styles.linksSection}>
-      <SectionTitle title="Links" />
+      {/* <SectionTitle title="Links" /> */}
       <div className={styles.linksContainer}>
         <div className={styles.linkContainer}>
-          <a href="">
+          <a target="_blank" href="https://github.com/ArthurBosch">
             <Image
               alt="Link - github"
               src={"./icons/github.svg"}
@@ -19,7 +19,7 @@ const Links: FC = () => {
           </a>
         </div>
         <div className={styles.linkContainer}>
-          <a href="">
+          <a target="_blank" href="https://t.me/champagneboi">
             <Image
               alt="Link - telegram"
               src={"./icons/telegram.svg"}
@@ -29,7 +29,10 @@ const Links: FC = () => {
           </a>
         </div>
         <div className={styles.linkContainer}>
-          <a href="">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/arthur-bosch-dev/"
+          >
             <Image
               alt="Link - linkedin"
               src={"./icons/linkedin.svg"}
@@ -39,7 +42,10 @@ const Links: FC = () => {
           </a>
         </div>
         <div className={styles.linkContainer}>
-          <a href="">
+          <a
+            target="_blank"
+            href="mailto:mr.bolshakov12@gmail.com&subject=mail through portfolio site"
+          >
             <Image
               alt="Link - email"
               src={"./icons/email.svg"}

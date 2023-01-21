@@ -27,8 +27,8 @@ export const mockups: dataItem[] = [
     ],
     isHorizontal: false,
     links: {
-      github: "",
-      live: "",
+      github: "https://github.com/ArthurBosch/simple-timekeeper-react",
+      live: "https://simple-timekeeper-react.vercel.app/",
     },
   },
   {

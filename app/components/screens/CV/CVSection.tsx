@@ -5,7 +5,7 @@ import styles from "./CVSection.module.scss";
 
 const CVSection: FC = () => {
   return (
-    <div className={styles.CVContainer}>
+    <div className={styles.CVContainer} id="cv">
       <CVHeading />
       <div className={styles.buttonsContainer}>
         <CVButton className={styles.download} title="Download" href="" />

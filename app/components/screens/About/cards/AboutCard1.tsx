@@ -33,7 +33,7 @@ const AboutCard1: FC<{ className: string }> = ({ className }) => {
             width={100}
             height={100}
           />
-          <h5>5-star hotel cook</h5>
+          <h5>five-star hotel cook</h5>
         </div>
         <div className={styles.iconContainer}>
           <Image

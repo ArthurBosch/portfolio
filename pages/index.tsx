@@ -1,7 +1,6 @@
 import HomeScreen from "@/components/screens/HomeScreen/HomeScreen";
 import Head from "next/head";
 import SVSection from "@/components/screens/CV/CVSection";
-import styles from "../styles/Home.module.scss";
 import { useEffect, useState } from "react";
 import { MenuContextProvider } from "@/shared/MenuContextProvider";
 import Portfolio from "@/components/screens/Portfolio/Portfolio";
@@ -10,6 +9,7 @@ import About from "@/components/screens/About/About";
 import Links from "@/components/screens/Links/Links";
 import dynamic from "next/dynamic";
 import Footer from "@/components/screens/Footer/Footer";
+import styles from "../styles/Home.module.scss";
 
 const DynamicHeader = dynamic(() => import("@/components/ui/Header/Header"), {
   ssr: false,

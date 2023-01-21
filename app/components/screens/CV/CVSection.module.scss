@@ -1,5 +1,17 @@
 .CVContainer {
-  @apply w-full h-48 bg-lightGray flex items-center justify-around flex-wrap mt-64;
+  @apply w-full h-48 bg-lightGray flex items-center justify-around flex-wrap mt-64 relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @apply bg-primary;
+    filter: blur(20px);
+  }
 
   background: radial-gradient(
     98.26% 11347.74% at 0% 50%,
@@ -40,7 +52,8 @@
   }
 
   button {
-    @apply border-2 border-darkGray border-solid border-radius pt-2 pb-2 pl-64 pr-64;
+    @apply border-2 border-darkGray border-solid pt-2 pb-2 pl-64 pr-64;
+    border-radius: 10px;
 
     &:not(:nth-of-type(0)) {
       @apply ml-10;
@@ -55,7 +68,7 @@
 
     &:hover {
       @apply shadow-lg border-white border-solid border-2;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.15s ease-in-out;
     }
   }
 
