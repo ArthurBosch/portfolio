@@ -8,8 +8,7 @@ const CVSection: FC = () => {
     <div className={styles.CVContainer} id="cv">
       <CVHeading />
       <div className={styles.buttonsContainer}>
-        <CVButton className={styles.download} title="Download" href="" />
-        <CVButton className={styles.read} title="Read now" href="" />
+        <CVButton className={styles.read} title="Read now" href="/Resume.pdf" />
       </div>
     </div>
   );
