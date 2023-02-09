@@ -29,8 +29,11 @@
     -webkit-text-fill-color: transparent;
   }
 
-  @media (max-width: 479px) {
+  @media (max-width: 749px) {
     @apply flex-col;
+    h1 {
+      font-size: 5rem;
+    }
   }
 
   @media (max-width: 900px) {
