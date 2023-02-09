@@ -33,7 +33,7 @@ const AboutCard3: FC<{ className: string }> = ({ className }) => {
             width={100}
             height={100}
           />
-          <h5>cutting edge tech</h5>
+          <h5>cutting edge web</h5>
         </div>
         <div className={styles.iconContainer}>
           <Image

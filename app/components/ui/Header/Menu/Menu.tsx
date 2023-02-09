@@ -8,7 +8,7 @@ const Menu: FC = () => {
         <a href="#portfolio">Portfolio</a>
       </li>
       <li>
-        <a href="#cv">CV</a>
+        <a href="#cv">Resume</a>
       </li>
       <li>
         <a href="#about">About</a>

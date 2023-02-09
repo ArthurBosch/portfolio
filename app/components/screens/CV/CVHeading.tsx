@@ -3,7 +3,7 @@ import { FC } from "react";
 const CVHeading: FC = () => {
   return (
     <div>
-      <h1>CV</h1>
+      <h1>Resume</h1>
     </div>
   );
 };

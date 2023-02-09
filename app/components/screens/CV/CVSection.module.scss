@@ -22,8 +22,11 @@
   );
 
   h1 {
-    @apply text-9xl font-bold;
-    color: #1e1e1e;
+    font-size: 8rem;
+    font-weight: 500;
+    background: -webkit-linear-gradient(0deg, #d038d3 0%, #000000 35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   @media (max-width: 479px) {
