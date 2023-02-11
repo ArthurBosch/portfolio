@@ -12,7 +12,7 @@ const Three: FC = () => {
   }, [orbitControlsRef.current]);
   return (
     <>
-      <PerspectiveCamera makeDefault={true} position={[0, 1, 5]} />
+      <PerspectiveCamera position={[0, 0, 5]} />
       <OrbitControls
         ref={orbitControlsRef}
         autoRotate={true}
