@@ -12,6 +12,7 @@ import Links from "@/components/screens/Links/Links";
 import Footer from "@/components/screens/Footer/Footer";
 
 import styles from "../styles/Home.module.scss";
+import CanvasEl from "@/components/screens/Three/Canvas";
 
 const DynamicHeader = dynamic(() => import("@/components/ui/Header/Header"), {
   ssr: false,
@@ -43,6 +44,7 @@ export default function Home() {
 
       <MenuContextProvider>
         <div className={styles.appContainer}>
+          <CanvasEl />
           <DynamicHeader />
           <HomeScreen />
           <Portfolio />
