@@ -1,10 +1,13 @@
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import {
+  OrbitControls,
+  OrbitControlsProps,
+  PerspectiveCamera,
+} from "@react-three/drei";
 import { FC, useEffect, useRef } from "react";
-
-type OrbitControlsType = typeof OrbitControls;
+declare const OrbitControlsType: any;
 
 const Three: FC = () => {
-  const orbitControlsRef = useRef<OrbitControlsType | null>(null);
+  const orbitControlsRef = useRef<typeof OrbitControlsType>(null);
   const sphereRef = useRef(null);
 
   useEffect(() => {
