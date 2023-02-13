@@ -45,8 +45,8 @@ export const mockups: dataItem[] = [
     ],
     isHorizontal: true,
     links: {
-      github: "",
-      live: "",
+      github: "https://github.com/ArthurBosch/online-cinema-front",
+      live: "https://arthur-bosch-cinema.vercel.app/",
     },
   },
 ];
