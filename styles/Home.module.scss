@@ -4,6 +4,10 @@
   z-index: 30;
 }
 
+.canvas {
+  touch-action: auto;
+}
+
 @keyframes fadein {
   from {
     filter: opacity(0);
