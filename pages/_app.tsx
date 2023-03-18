@@ -5,17 +5,17 @@ import localFont from "@next/font/local";
 const resistMono = localFont({
   src: [
     {
-      path: "../font/ResistMono-Rg.otf",
+      path: "../font/resistmono-rg-webfont.woff",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../font/ResistMono-Bd.otf",
+      path: "../font/resistmono-bd-webfont.woff",
       weight: "500",
       style: "bold",
     },
     {
-      path: "../font/ResistMono-Lt.otf",
+      path: "../font/resistmono-lt-webfont.woff",
       weight: "300",
       style: "light",
     },
